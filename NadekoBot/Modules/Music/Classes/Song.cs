@@ -132,7 +132,7 @@ namespace NadekoBot.Modules.Music.Classes
         {
             var bufferTask = BufferSong(cancelToken).ConfigureAwait(false);
             var bufferAttempts = 0;
-            const int waitPerAttempt = 500;
+            const int waitPerAttempt = 2000;
             var toAttemptTimes = SongInfo.ProviderType != MusicType.Normal ? 5 : 9;
             while (!prebufferingComplete && bufferAttempts++ < toAttemptTimes)
             {
